@@ -1,4 +1,4 @@
-module github.com/containerd/cgroups/v3
+module github.com/br1ght3n/cgroups/v3
 
 go 1.17
 

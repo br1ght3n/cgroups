@@ -38,10 +38,17 @@ func (r *Memory) Values() (o []Value) {
 		})
 	}
 	if r.Max != nil {
-		o = append(o, Value{
-			filename: "memory.max",
-			value:    *r.Max,
-		})
+		if *r.Max != -1 {
+			o = append(o, Value{
+				filename: "memory.max",
+				value:    *r.Max,
+			})
+		} else {
+			o = append(o, Value{
+				filename: "memory.max",
+				value:    "max",
+			})
+		}
 	}
 	if r.Low != nil {
 		o = append(o, Value{

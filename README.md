@@ -1,9 +1,9 @@
 # cgroups
 
-[![Build Status](https://github.com/containerd/cgroups/workflows/CI/badge.svg)](https://github.com/containerd/cgroups/actions?query=workflow%3ACI)
+[![Build Status](https://github.com/br1ght3n/cgroups/workflows/CI/badge.svg)](https://github.com/br1ght3n/cgroups/actions?query=workflow%3ACI)
 [![codecov](https://codecov.io/gh/containerd/cgroups/branch/main/graph/badge.svg)](https://codecov.io/gh/containerd/cgroups)
-[![GoDoc](https://godoc.org/github.com/containerd/cgroups?status.svg)](https://godoc.org/github.com/containerd/cgroups)
-[![Go Report Card](https://goreportcard.com/badge/github.com/containerd/cgroups)](https://goreportcard.com/report/github.com/containerd/cgroups)
+[![GoDoc](https://godoc.org/github.com/br1ght3n/cgroups?status.svg)](https://godoc.org/github.com/br1ght3n/cgroups)
+[![Go Report Card](https://goreportcard.com/badge/github.com/br1ght3n/cgroups)](https://goreportcard.com/report/github.com/br1ght3n/cgroups)
 
 Go package for creating, managing, inspecting, and destroying cgroups.
 The resources format for settings on the cgroup uses the OCI runtime-spec found
@@ -153,13 +153,13 @@ so the resulting slice would be located here on disk:
 
 ```go
 import (
-    "github.com/containerd/cgroups/v3/cgroup2"
+    "github.com/br1ght3n/cgroups/v3/cgroup2"
     specs "github.com/opencontainers/runtime-spec/specs-go"
 )
 
 res := cgroup2.Resources{}
 // dummy PID of -1 is used for creating a "general slice" to be used as a parent cgroup.
-// see https://github.com/containerd/cgroups/blob/1df78138f1e1e6ee593db155c6b369466f577651/v2/manager.go#L732-L735
+// see https://github.com/br1ght3n/cgroups/blob/1df78138f1e1e6ee593db155c6b369466f577651/v2/manager.go#L732-L735
 m, err := cgroup2.NewSystemd("/", "my-cgroup-abc.slice", -1, &res)
 if err != nil {
 	return err

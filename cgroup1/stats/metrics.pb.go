@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.28.1
 // 	protoc        v3.21.5
-// source: github.com/containerd/cgroups/cgroup1/stats/metrics.proto
+// source: github.com/br1ght3n/cgroups/cgroup1/stats/metrics.proto
 
 package stats
 

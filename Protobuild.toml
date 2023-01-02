@@ -15,13 +15,13 @@ generators = ["go"]
 
 # Aggregrate the API descriptors to lock down API changes.
 [[descriptors]]
-prefix = "github.com/containerd/cgroups/cgroup1/stats"
+prefix = "github.com/br1ght3n/cgroups/cgroup1/stats"
 target = "cgroup1/stats/metrics.pb.txt"
 ignore_files = [
 	"google/protobuf/descriptor.proto",
 ]
 [[descriptors]]
-prefix = "github.com/containerd/cgroups/cgroup2/stats"
+prefix = "github.com/br1ght3n/cgroups/cgroup2/stats"
 target = "cgroup2/stats/metrics.pb.txt"
 ignore_files = [
 	"google/protobuf/descriptor.proto",

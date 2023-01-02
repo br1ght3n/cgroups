@@ -39,13 +39,13 @@ jobs:
       - name: Checkout cgroups
         uses: actions/checkout@v3
         with:
-          path: src/github.com/containerd/cgroups
+          path: src/github.com/br1ght3n/cgroups
           fetch-depth: 25
 
       - name: Project checks
         uses: containerd/project-checks@v1.1.0
         with:
-          working-directory: src/github.com/containerd/cgroups
+          working-directory: src/github.com/br1ght3n/cgroups
 
   test:
     name: Test cgroups
@@ -73,16 +73,16 @@ jobs:
       - name: Checkout cgroups
         uses: actions/checkout@v3
         with:
-          path: src/github.com/containerd/cgroups
+          path: src/github.com/br1ght3n/cgroups
 
       - name: Run cgroup tests
         run: |
           $(command -v go) test -exec sudo -v -race -coverprofile=coverage.txt -covermode=atomic ./...
-        working-directory: src/github.com/containerd/cgroups
+        working-directory: src/github.com/br1ght3n/cgroups
 
       - name: Build cgctl
         run: make all
-        working-directory: src/github.com/containerd/cgroups
+        working-directory: src/github.com/br1ght3n/cgroups
 
   proto:
     name: Compare auto-generated Go files
@@ -103,7 +103,7 @@ jobs:
       - name: Checkout cgroups
         uses: actions/checkout@v3
         with:
-          path: src/github.com/containerd/cgroups
+          path: src/github.com/br1ght3n/cgroups
 
       - name: Install protoc
         run: |
@@ -121,4 +121,4 @@ jobs:
         run: |
           make proto
           git diff --exit-code
-        working-directory: src/github.com/containerd/cgroups
+        working-directory: src/github.com/br1ght3n/cgroups

@@ -26,7 +26,7 @@ type CPUMax string
 
 func NewCPUMax(quota *int64, period *uint64) CPUMax {
 	max := "max"
-	if quota != nil {
+	if quota != nil && *quota != -1 {
 		max = strconv.FormatInt(*quota, 10)
 	}
 	return CPUMax(strings.Join([]string{max, strconv.FormatUint(*period, 10)}, " "))
